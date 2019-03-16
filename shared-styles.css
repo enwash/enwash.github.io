@@ -1,0 +1,50 @@
+html {
+	scroll-behavior: smooth;
+}
+h1, h2, h3 {
+	font-family: 'Convergence', sans-serif;
+}
+h3 {
+	margin: 42px;
+}
+.hlink {
+	pointer-events: none;
+	transition: transform 1s;
+	margin-bottom: 100vh;
+}
+.hlink:hover {
+	transform: scale(1.03);
+}
+.hlink:active {
+	transform: scale(.99);
+	transition: all 0s;
+}
+.hlink a {
+	pointer-events: auto;
+	font-family: 'Josefin Sans', sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	background: #333;
+	padding: 20px 28px 16px 28px;
+	color: white;
+	background: rgb(232,120,21);
+	background: linear-gradient(159deg, rgba(232,120,21,1) 25%, rgba(233,32,91,1) 75%);
+	transition: background 1s, box-shadow 1s;
+	background-size: 200% auto;
+	box-shadow: 0 0 50px rgba(0,0,0,.2);
+}
+.hlink a:hover {
+	background-position: right center;
+	box-shadow: 0 0 50px rgba(0,0,0,.4);
+}
+.logo {
+	text-align: left;
+	width: 8vh;
+}
+.snapshot {
+	width: 80% !important;
+	cursor: pointer;
+	box-shadow: none;
+	margin: 0;
+	padding: 0;
+}
