@@ -1,0 +1,66 @@
+html {
+	scroll-behavior: smooth;
+}
+body {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,ffc107+100 */
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+33,ffc107+100 */
+	background: black;
+	}
+h1, h2, h3 {
+	font-family: 'Oswald', sans-serif;
+	color: white;
+
+}
+/*h3 {
+	font-family: 'Open Sans', sans-serif;
+}*/
+.video-col {
+	padding: 0 !important;
+}
+video {
+	display: block;
+	cursor: pointer;
+	outline: none;
+}
+.stylebtn {
+	font-family: 'Open Sans', sans-serif;
+	text-decoration: none;
+	border-left: 3px solid #ffc107;
+	padding: 5px 8px 5px 5px;
+	text-transform: uppercase;
+}
+.stylebtn:hover {
+	background: #ffc107;
+	color: black;
+}
+.stleft {
+	border-left: none !important;
+	border-right: 3px solid #ffc107;
+	padding: 5px 5px 5px 8px;
+}
+p {
+	font-family: 'Open Sans', sans-serif;
+}
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background: black; 
+}
+::-webkit-scrollbar-thumb {
+  background: #222; 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+.main-btn {
+	font-family: 'Open Sans', sans-serif;
+	text-decoration: none !important;
+	border: 3px solid #ffc107;
+	padding: 8px 12px;
+	text-transform: uppercase;
+}
+.main-btn:hover {
+	background: #ffc107;
+	color: black !important;
+}
