@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="../shared-styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <script src="js/filters.js"></script>
+    <title>Image Filters</title>
+</head>
+
+<body>
+	<div class="w3-main w3-container" style="margin-left:340px;margin-right:40px">
+		<div class="w3-container-fluid" style="margin-top:100px; margin-bottom:50px">
+		    <h1 class="w3-xxxlarge w3-text-red" id="portfolio"><b>Image Filters</b></h1>
+		    <p class="w3-text-red w3-large" style="margin-bottom:36px"><b><a href="../projects.html">Projects</a> &gt; <a>Image Filters</a></b></p>
+		   	<hr style="width:50px;border:5px solid red" class="w3-round">
+		</div>
+		<input type="file" onchange="previewFile()"><br><br>
+		<select id="filter" onclick="updateFilter()">
+			<option value="grayscale">Grayscale</option>
+			<option value="sepia">Sepia</option>
+			<option value="invert">Invert</option>
+			<option value="opacity">Opacity</option>
+			<option value="saturate">Saturation</option>
+			<option value="contrast">Contrast</option>
+		</select><br><br>
+		<input type="range" min="1" max="200" value="100" class="slider" id="amount" oninput="updateFilter()">
+		<br><br>
+		<img src="http://placekitten.com/400/400" alt="&nbsp;Image output">
+		<canvas id="image" width="100%" height="100%"></canvas>
+		<br><br>
+	</div>
+</body>
+
+</html>
