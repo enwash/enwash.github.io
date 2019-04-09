@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="shared-styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <title>Portfolio</title>
+</head>
+
+<body>
+	<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+	  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+	  <div class="w3-container">
+	    <h1 class="w3-padding-16"><b>Query</b></h1>
+	  </div>
+	  <div class="w3-bar-block">
+	    <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Portfolio</a> 
+	    <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Packages</a> 
+	    <a href="#how-it-works" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">How it Works</a> 
+	    <a href="#testimonials" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Testimonials</a> 
+	    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact Me</a>
+	  </div>
+	</nav>
+
+	<!-- Top menu on small screens -->
+	<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+	  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+	  <span>Query</span>
+	</header>
+
+	<!-- Overlay effect when opening sidebar on small screens -->
+	<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+	<!-- INNER PAGE CONTENT -->
+	<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+		<div class="w3-container" style="margin-top:80px; margin-bottom:75px">
+		    <h1 class="w3-jumbo"><b>A fresh take on minimal design.</b></h1>
+		    <h1 class="w3-xxxlarge w3-text-red" id="portfolio"><b>Portfolio</b></h1>
+		   	<hr style="width:50px;border:5px solid red" class="w3-round">
+		</div>
+		<div class="w3-row-padding vidrow">
+			<div class="w3-margin-bottom w3-col l4 m12 s12 vidbox">
+				<video controls width="100%">
+				    <source src="work/1.mp4" type="video/mp4">
+				</video>
+			</div>
+			<div class="w3-margin-bottom w3-col l4 m12 s12 vidbox">
+				<video controls width="100%">
+				    <source src="work/2.mp4" type="video/mp4">
+				</video>
+			</div>
+			<div class="w3-margin-bottom w3-col l4 m12 s12 vidbox">
+				<video controls width="100%">
+				    <source src="work/3.mp4" type="video/mp4">
+				</video>
+			</div>
+		</div>
+
+		<div class="w3-container" id="packages" style="margin-top:75px; margin-bottom:75px">
+		    <h1 class="w3-xxxlarge w3-text-red"><b>Packages</b></h1>
+		    <hr style="width:50px;border:5px solid red" class="w3-round">
+		    <p class="w3-large w3-text-dark-grey w3-third w3-justify" style="margin-top:75px">Graphic design isn't all the same. Every design is a work of art, a singular, unique piece crafted specifically for you. Unlike many designers, I experiment with new styles to find what's perfect for a client--instead of picking just one. Each of the packages below is catered to a specific type of introduction, so you can get the motion branding that fits your needs.</p>
+		</div>
+
+		<div class="w3-row-padding">
+		    <div class="w3-quarter">
+		      <ul class="w3-ul w3-light-grey w3-center">
+		        <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
+		        <li class="w3-padding-16">Up to 10 seconds long</li>
+		        <li class="w3-padding-16">Customize text, color and song</li>
+		        <li class="w3-padding-16">Basic graphics and animation</li>
+		        <li class="w3-padding-16">High quality .MOV file</li>
+		        <li class="w3-padding-16">1920x1080 resolution</li>
+		        <li class="w3-padding-16">
+		        <span class="w3-opacity">starting at</span>
+		          <h2>$ 7.00</h2>
+		        </li>
+		        <li class="w3-light-grey w3-padding-24">
+		          <a class="w3-button w3-white w3-padding-large w3-hover-black" href="https://www.paypal.com/cgi-bin/webscr?cmd=_cart&business=5PW8SBK2SBT3C&lc=US&item_name=Basic%20Motion%20Introduction&amount=7%2e00&currency_code=USD&button_subtype=products&add=1&bn=PP%2dShopCartBF%3abtn_cart_LG%2egif%3aNonHosted">Place an Order</a>
+		        </li>
+		      </ul>
+		    </div>
+		        
+		    <div class="w3-quarter">
+		      <ul class="w3-ul w3-light-grey w3-center">
+		        <li class="w3-dark-grey w3-xlarge w3-padding-32">Premium</li>
+		        <li class="w3-padding-16">Up to 15 seconds long</li>
+		        <li class="w3-padding-16">Customize text, color, song, and animation</li>
+		        <li class="w3-padding-16">Advanced graphics and animation</li>
+		        <li class="w3-padding-16">High quality .MOV video + alpha channel</li>
+		        <li class="w3-padding-16">Up to 2K resolution</li>
+		        <li class="w3-padding-16">
+		        <span class="w3-opacity">starting at</span>
+		          <h2>$ 10.00</h2>
+		        </li>
+		        <li class="w3-light-grey w3-padding-24">
+		          <a class="w3-button w3-white w3-padding-large w3-hover-black" href="https://www.paypal.com/cgi-bin/webscr?cmd=_cart&business=5PW8SBK2SBT3C&lc=US&item_name=Premium%20Motion%20Introduction&amount=10%2e00&currency_code=USD&button_subtype=products&add=1&bn=PP%2dShopCartBF%3abtn_cart_LG%2egif%3aNonHosted">Place an Order</a>
+		        </li>
+		      </ul>
+		    </div>
+
+		    <div class="w3-quarter">
+		      <ul class="w3-ul w3-light-grey w3-center">
+		        <li class="w3-dark-grey w3-xlarge w3-padding-32">Pro</li>
+		        <li class="w3-padding-16">Up to 30 seconds long</li>
+		        <li class="w3-padding-16">Customize everything</li>
+		        <li class="w3-padding-16">Exquisite graphics and animation</li>
+		        <li class="w3-padding-16">Custom file format</li>
+		        <li class="w3-padding-16">Up to 4K resolution</li>
+		        <li class="w3-padding-16">
+		        <span class="w3-opacity">starting at</span>
+		          <h2>$ 15.00</h2>
+		        </li>
+		        <li class="w3-light-grey w3-padding-24">
+		          <a class="w3-button w3-white w3-padding-large w3-hover-black" href="https://www.paypal.com/cgi-bin/webscr?cmd=_cart&business=5PW8SBK2SBT3C&lc=US&item_name=Professional%20Motion%20Introduction&amount=15%2e00&currency_code=USD&button_subtype=products&add=1&bn=PP%2dShopCartBF%3abtn_cart_LG%2egif%3aNonHosted">Place an Order</a>
+		        </li>
+		      </ul>
+		    </div>
+
+		    <div class="w3-quarter">
+		      <ul class="w3-ul w3-light-grey w3-center">
+		        <li class="w3-red w3-xlarge w3-padding-32">Custom</li>
+		        <li class="w3-padding-16">Unlimited length</li>
+		        <li class="w3-padding-16">Customize everything</li>
+		        <li class="w3-padding-16">Mind-boggling graphics and animation</li>
+		        <li class="w3-padding-16">Custom file format</li>
+		        <li class="w3-padding-16">Any (conceivable) resolution</li>
+		        <li class="w3-padding-16">
+		        <span class="w3-opacity">starting at</span>
+		          <h2>$ 35.00</h2>
+		        </li>
+		        <li class="w3-light-grey w3-padding-24">
+		          <a class="w3-button w3-red w3-padding-large w3-hover-black" href="mailto:ericknwash@gmail.com?subject=Custom Introduction">Get a quote</a>
+		        </li>
+		      </ul>
+		    </div>
+		</div>
+
+		<div class="w3-container" id="how-it-works" style="margin-top:75px; margin-bottom:75px">
+		    <h1 class="w3-xxxlarge w3-text-red"><b>How it Works</b></h1>
+		    <hr style="width:50px;border:5px solid red" class="w3-round">
+		    <p class="w3-large w3-text-dark-grey w3-third w3-justify" style="margin-top:75px">Place an order by clicking the button below. Then enter your billing information through paypal and confirm. I'll contact you via your provided information and ask for some details within a couple of days. Once you reply, I'll get to work. Most orders will be completed within 5 business days. Or just 5 days. If you don't receive a response within that time--or you just have a question for me--you can always contact me with the form below.</p>
+		</div>
+
+		<div class="w3-container" id="testimonials" style="margin-top:75px; margin-bottom:75px">
+		    <h1 class="w3-xxxlarge w3-text-red"><b>Testimonials</b></h1>
+		    <hr style="width:50px;border:5px solid red" class="w3-round">
+		</div>
+
+		<div class="w3-row-padding">
+			<div class="w3-half">
+				<blockquote class="w3-panel w3-leftbar w3-light-grey">
+				  <p class="w3-large">
+				  <i>"Absolute pleasure to work with Query. We discussed everything and he allowed me to be apart of his creative process every step of the way by sending me drafts in which I was able to request any changes I felt necessary. The animation is smooth, clean, and most importantly, professional."</i></p>
+				  <p>CaptainNick88 (premium package)</p>
+				</blockquote>
+			</div>
+		</div>
+		<div class="w3-row-padding">
+			<div class="w3-half">
+				<blockquote class="w3-panel w3-leftbar w3-light-grey">
+				  <p class="w3-large">
+				  <i>"Great work. Fast, super simple, sleek, clean designs. Would pay again!"</i></p>
+				  <p>hoo (basic package)</p>
+				</blockquote>
+			</div>
+		</div>
+
+		<div class="w3-container w3-large w3-text-dark-grey" id="contact" style="margin-top:75px; margin-bottom:59vh">
+		    <h1 class="w3-xxxlarge w3-text-red"><b>Contact Me</b></h1>
+		    <hr style="width:50px;border:5px solid red; margin-bottom: 75px;" class="w3-round">
+		    <p style="margin-bottom: 75px;">Questions? Hit me up here.</p>
+		    <form action="https://formspree.io/ericknwash@gmail.com" method="POST">
+		      <div class="w3-section">
+		        <label>Name</label>
+		        <input class="w3-input w3-border" type="text" name="Name" required>
+		      </div>
+		      <div class="w3-section">
+		        <label>Email</label>
+		        <input class="w3-input w3-border" type="text" name="Email" required>
+		      </div>
+		      <div class="w3-section">
+		        <label>Message</label>
+		        <textarea class="w3-input w3-border" type="text" name="Message" required></textarea>
+		      </div>
+		      <button type="submit" class="w3-button w3-red w3-padding-large w3-hover-black w3-margin-bottom">Send Message</button>
+		    </form>  
+		</div>
+
+	</div>
+
+	<script>
+
+	// Script to open and close sidebar, inspired by a w3.css template
+	function w3_open() {
+	  document.getElementById("mySidebar").style.display = "block";
+	  document.getElementById("myOverlay").style.display = "block";
+	}
+	 
+	function w3_close() {
+	  document.getElementById("mySidebar").style.display = "none";
+	  document.getElementById("myOverlay").style.display = "none";
+	}
+
+	</script>
+</body>
+
+</html>
