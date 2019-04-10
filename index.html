@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="shared-styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
@@ -12,14 +11,22 @@
 </head>
 
 <body>
-	<div class="w3-red w3-large w3-padding w3-center w3-container-fluid main w3-display">
 		<div class="w3-display-center">
-			<h1 class="w3-xxxlarge" style="font-weight:bold;">Query</h1>
-			<a href="design.html" class="w3-button w3-hover-white w3-center">Motion Design</a> 
-			<a href="projects.html" class="w3-button w3-hover-white w3-center">Projects</a>
-		</div>
-		<br>
-	</div>
+    <div class="w3-red w3-large w3-padding w3-center w3-container-fluid main w3-display">
+        <div class="w3-display-center">
+            <h1 class="w3-xxxlarge" style="font-weight:bold;">Query</h1>
+            <a href="design.html" class="w3-button w3-hover-white w3-center">Motion Design</a>
+            <a href="projects.html" class="w3-button w3-hover-white w3-center">Projects</a>
+        </div>
+        <br>
+    </div>
+    <script>
+    let redirs = { "1": "giveaway.html", "2": "projects/pypl.html", "3": "design.html", "4": "https://youtube.com/enwash?sub_confirmation=1" };
+
+    if (location.search.indexOf('r=')>=0) {
+        window.location = redirs[window.location.search.substr(3)];
+    }
+    </script>
 </body>
 
 </html>
