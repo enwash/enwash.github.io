@@ -14,13 +14,14 @@
 
 <body>
     <div class="w3-container w3-center" style="padding:15%">
-        <button class="w3-large" onclick="redirPage()">Continue</button>
+        <h2>Redirecting...</h2>
+        <button class="w3-large" onclick="window.location = redirs[window.location.href.slice(-1)];">Manual redirect</button>
     </div>
     <script>
-        let redirs = { "1": "giveaway.html", "2": "projects/pypl.html", "3": "design.html" };
+        let redirs = { "1": "giveaway.html", "2": "projects/pypl.html", "3": "design.html", "4": "https://youtube.com/enwash" };
 
-        function redirPage() {
-            window.location = redirs[window.location.search.substr(3)];
+        window.onload = function() {
+            window.location = redirs[window.location.href.slice(-1)];
         }
     </script>
 </body>
