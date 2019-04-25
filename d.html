@@ -13,20 +13,43 @@
         <h1 class="w3-text-red" style="font-weight:700" id="heading"></h1>
         <button disabled type="submit" id="btn" class="w3-red w3-btn">Start download</button>
     </form>
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
     <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyD7lmtwx1YSM6I-nBjNrKsGZ328C3EL5bQ",
+        authDomain: "qry-dl.firebaseapp.com",
+        databaseURL: "https://qry-dl.firebaseio.com",
+        projectId: "qry-dl",
+        storageBucket: "qry-dl.appspot.com",
+        messagingSenderId: "115817562597"
+    };
+    firebase.initializeApp(config);
+
     let btn = document.getElementById('btn');
     let form = document.getElementById('form');
     let h = document.getElementById('heading');
 
     function sub() {
+    	firebase.database().ref('qry-dl/' + url.substring(0, url.length - 4)).once("value").then(function(snapshot) {
+        	if (snapshot.val()) {
+        		firebase.database().ref('qry-dl/' + url.substring(0, url.length - 4)).set({	
+	                Num: parseInt(snapshot.val().Num, 10) + 1
+	            });
+        	} else {
+        		firebase.database().ref('qry-dl/' + url.substring(0, url.length - 4)).set({
+	                Num: 1
+	            });
+        	}
+        });
         window.open('https://youtube.com/enwash?sub_confirmation=1');
     }
 
     if (window.location.href.indexOf("#") != -1) {
-    	url = window.location.href.substring(window.location.href.indexOf('#') + 1) + '.zip';
-    	form.action = 'd/' + url;
-       	h.innerHTML = url;
-       	btn.disabled = false;
+        url = window.location.href.substring(window.location.href.indexOf('#') + 1) + '.zip';
+        form.action = 'd/' + url;
+        h.innerHTML = url;
+        btn.disabled = false;
     } else {
         btn.innerHTML = 'Invalid download link!';
         btn.disabled = true;
