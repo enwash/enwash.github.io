@@ -10,7 +10,7 @@
 
 <body style="text-align:center">
     <form id="form" method="get" action="" onsubmit="sub()" style="display:inline-block;margin-top:40vh;">
-    	<h1 class="w3-text-red" style="font-weight:700" id="heading"></h1>
+        <h1 class="w3-text-red" style="font-weight:700" id="heading"></h1>
         <button disabled type="submit" id="btn" class="w3-red w3-btn">Start download</button>
     </form>
     <script>
@@ -21,10 +21,12 @@
     function sub() {
         window.open('https://youtube.com/enwash?sub_confirmation=1');
     }
+
     if (window.location.href.indexOf("#") != -1) {
-        form.action = 'd/' + window.location.href.substring(window.location.href.indexOf('#') + 1) + '.zip';
-        h.innerHTML = window.location.href.substring(window.location.href.indexOf('#') + 1) + '.zip';
-        btn.disabled = false;
+    	url = window.location.href.substring(window.location.href.indexOf('#') + 1) + '.zip';
+    	form.action = 'd/' + url;
+       	h.innerHTML = url;
+       	btn.disabled = false;
     } else {
         btn.innerHTML = 'Invalid download link!';
         btn.disabled = true;
