@@ -1,0 +1,87 @@
+html,
+body {
+    background: #5C3B99;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    color: white;
+    font-size: 6vh;
+    line-height: 5.5vh;
+}
+
+p {
+    margin-top: -4vh;
+    color: #fff;
+    font-size: 1.5vh;
+    line-height: 1.9vh;
+}
+
+.heading {
+    width: 40vh;
+    float: middle;
+    padding-top: 33vh;
+}
+
+.btn {
+    text-decoration: none;
+    color: white;
+    background: #FF9D7C;
+    padding: 12px 22px;
+    box-shadow: 8px 8px 0 #FF4177;
+    transition: all .3s;
+    font-size: 1.5vh;
+    font-weight: 500;
+    margin-right: 1.5vh;
+}
+
+.btn:hover {
+    box-shadow: 4px 4px 0 #FF4177;
+}
+
+#l0 {
+    background-image: url("images/layer0.svg");
+    margin-top: -50vh;
+}
+
+#l1 {
+    background-image: url("images/layer1.svg");
+}
+
+#l0,
+#l1 {
+    /*filter: drop-shadow(8px 8px 0px rgba(0,0,0,.2));*/
+    background-size: contain;
+    width: 100vw;
+    height: 100vh;
+    margin-left: 4vh;
+}
+
+.page-divider {
+    margin-bottom: 38vh;
+}
+
+.link {
+    color: #FF9D7C;
+}
+
+video {
+    width: auto;
+    height: 35vh;
+    outline: none;
+    display: inline-block;
+    margin: 1vh 1.3vh;
+}
+
+@media only screen and (max-width: 1000px) {
+    video {
+        width: 90vw;
+        height: auto;
+    }
+}
