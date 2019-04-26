@@ -84,4 +84,7 @@ video {
         width: 90vw;
         height: auto;
     }
+    #l0, #l1 {
+        background: none;
+    }
 }
