@@ -13,7 +13,7 @@ body {
 h1 {
     color: white;
     font-size: 6vh;
-    line-height: 5.5vh;
+    line-height: 6.4vh;
 }
 
 p {
@@ -24,7 +24,7 @@ p {
 }
 
 .heading {
-    width: 40vh;
+    width: 60vh;
     float: middle;
     padding-top: 33vh;
 }
@@ -33,8 +33,8 @@ p {
     text-decoration: none;
     color: white;
     background: #FF9D7C;
-    padding: 12px 22px;
-    box-shadow: 8px 8px 0 #FF4177;
+    padding: 1vh 2vh;
+    box-shadow: .6vh .6vh 0 #FF4177;
     transition: all .3s;
     font-size: 1.5vh;
     font-weight: 500;
@@ -80,6 +80,29 @@ video {
     margin: 1vh 1.3vh;
 }
 
+td h2 {
+    color: #FF9D7C;
+    font-size: 3vh;
+}
+
+td ul {
+    list-style: none;
+    padding-left: 0;
+    color: white;
+    font-size: 1.5vh;
+    padding-bottom: 1vh;
+}
+
+td ul li {
+    line-height: 2.7vh;
+}
+
+td {
+    border-left: .2vh solid #FF9D7C;
+    padding: 2vh;
+    padding-top: 0 !important;
+}
+
 @media only screen and (max-width: 1000px) {
     video {
         width: 90vw;
@@ -91,5 +114,13 @@ video {
     .btn {
         display: block;
         margin-bottom: 1.5vh;
+    }
+    td {
+        width: 100%;
+        display: block;
+    }
+    .heading {
+        width: 80vw;
+
     }
 }
