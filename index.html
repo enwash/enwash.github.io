@@ -3,43 +3,170 @@
 
 <head>
     <title>Query</title>
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="icon" href="images/favicon.png">
 </head>
 
 <body>
-    <center>
-        <div class="heading" align="left">
-            <h1 class="animated fadeIn fast">A fresh take on minimal design.</h1>
-            <a href="#about" class="btn animated fadeIn faster">learn more</a>
+    <div class="centered">
+        <div class="header">
+            <div class="navbar">
+                <ul>
+                    <li><a onclick="show('home');" class="link navbtn active" id="bhome" href="#home">home</a></li>
+                    <li><a onclick="show('services');" class="link navbtn" id="bservices" href="#services">services</a></li>
+                    <li><a onclick="show('shop');" class="link navbtn" id="bshop" href="#shop">shop</a></li>
+                    <li><a onclick="show('contact');" class="link navbtn" id="bcontact" href="#contact">contact</a></li>
+                </ul>
+            </div>
         </div>
-        <div id="scene">
-            <div id="l0" data-depth="0.2" class="animated fadeIn slow"></div>
-            <div id="l1" data-depth="0.1" class="animated fadeIn slower"></div>
-        </div>
-        <div class="page-
-divider"></div>
-        <div class="heading" align="left" id="about">
-            <h1>About me</h1> <br>
-            <p align="justify">I'm Query,
-                a graphic and web designer. Unlike many designers, I experiment with new
-                styles to find what's perfect for a client so I can deliver the branding
-                you've always dreamed of.
-                <!--<a href="https://www.behance.net/gallery/79447299/2018-2019-Portfolio" target="_blank" class="link">View my portfolio</a>-->
+        <div class="cont default" id="home">
+            <h1>a fresh take on minimal design.</h1>
+            <p>I'm Query, a <cem>graphic, motion, and web</cem> designer and developer. I experiment with new styles to find what's perfect for a client so I can deliver <cem>the branding you've always dreamed of.</cem>
             </p>
-            <a href="graphics.html" class="btn">shop graphics</a>
-            <a href="web.html" class="btn">shop web</a>
+            <a class="link" href="#services" onclick="show('services');">learn more</a>
         </div>
-        <br>
-        <div class="page-divider"></div>
-    </center>
+        <div class="cont" id="services">
+            <h1>what i can do</h1>
+            <div class="productsCont">
+                <table class="products" onclick="this.classList.add('clicked');">
+                    <tr>
+                        <td id="graphics" onclick="openCat(this.id)">
+                            <p>graphics</p>
+                        </td>
+                        <td id="web" onclick="openCat(this.id)">
+                            <p>web</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="apps" onclick="openCat(this.id)">
+                            <p>apps</p>
+                        </td>
+                        <td id="music" onclick="openCat(this.id)">
+                            <p>music</p>
+                        </td>
+                    </tr>
+                </table>
+                <div class="product p1" id="pgraphics">
+                    <h2 class="productHead fg1">graphics portfolio</h2>
+                    <div class="videoCont">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/qoWx5h8FbRg?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <a class="link" href="#shop" onclick="show('shop')">view packages</a>
+                    <br><a class="link" onclick="unclick()" href="#">go back</a>
+                </div>
+                <div class="product p2" id="pweb">
+                    <h2 class="productHead fg1">web portfolio</h2>
+                    <ul>
+                        <li><a class="link" href="http://onyx2d.net">motion design shop</a></li>
+                        <li><a class="link" href="http://qurl.pro">url shortener</a></li>
+                    </ul>
+                    <a class="link" href="mailto:ericknwash@gmail.com?subject=Web design quote">get a quote</a>
+                    <br><a class="link" onclick="unclick()" href="#">go back</a>
+                </div>
+                <div class="product p3" id="papps">
+                    <h2 class="productHead fg1">app portfolio</h2>
+                    <ul>
+                        <li><a class="link" href="https://github.com/enwash/Q-Todo">todo extension</a></li>
+                        <li><a class="link" href="http://qurl.pro">url shortener</a></li>
+                        <li><a class="link" href="https://github.com/enwash/PyPL">predicate logic</a></li>
+                    </ul>
+                    <a class="link" href="mailto:ericknwash@gmail.com?subject=App development quote">get a quote</a>
+                    <br><a class="link" onclick="unclick()" href="#">go back</a>
+                </div>
+                <div class="product p4" id="pmusic">
+                    <h2 class="productHead fg1">music portfolio</h2>
+                    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/612351153&color=%23fd8b48&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><br>
+                    <a class="link" href="mailto:ericknwash@gmail.com?subject=Music production quote">get a quote</a>
+                    <br><a class="link" onclick="unclick()" href="#">go back</a>
+                </div>
+            </div>
+        </div>
+        <div class="cont" id="shop">
+            <h1>graphic design shop</h1>
+            <h2>basic</h2>
+            <ul>
+                <li>up to 10 seconds in length</li>
+                <li>full hd video file</li>
+                <li>$5.00</li>
+                <a class="link" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=5PW8SBK2SBT3C&lc=US&item_name=Basic%20Motion%20Introduction&amount=5%2e00&currency_code=USD&button_subtype=services&bn=PP%2dBuyNowBF%3abtn_buynowCC_LG%2egif%3aNonHosted">buy now</a>
+            </ul>
+            <h2>premium</h2>
+            <ul>
+                <li>up to 15 seconds in length</li>
+                <li>2k hd video file</li>
+                <li>$8.00</li>
+                <a class="link" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=5PW8SBK2SBT3C&lc=US&item_name=Premium%20Motion%20Introduction&amount=8%2e00&currency_code=USD&button_subtype=services&bn=PP%2dBuyNowBF%3abtn_buynowCC_LG%2egif%3aNonHosted">buy now</a>
+            </ul>
+            <h2>pro</h2>
+            <ul>
+                <li>up to 25 seconds in length</li>
+                <li>4k uhd video file</li>
+                <li>$13.00</li>
+                <a class="link" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=5PW8SBK2SBT3C&lc=US&item_name=Professional%20Motion%20Introduction&amount=13%2e00&currency_code=USD&button_subtype=services&bn=PP%2dBuyNowBF%3abtn_buynowCC_LG%2egif%3aNonHosted">buy now</a>
+            </ul>
+        </div>
+        <div class="cont" id="contact">
+            <h1>contact me</h1>
+            <p>questions? inquiries? queries for Query? Hit me up <a class="link" href="mailto:ericknwash@gmail.com">here</a>.</p>
+        </div>
+        <div class="footer">
+            <button style="cursor:pointer" class="link" onclick="toggleDark()">toggle dark mode</button>
+        </div>
+    </div>
     <script>
-    var scene =
-        document.getElementById('scene');
-    var parallaxInstance = new
-    Parallax(scene);
+    function openCat(elID) {
+        document.getElementById('p' + elID).classList.add('clicked');
+    }
+
+    function unclick() {
+        var els = document.querySelectorAll('.clicked');
+        for (var i = 0; i < els.length; i++) {
+            els[i].classList.remove('clicked');
+        }
+    }
+
+    function show(elID) {
+        unclick();
+
+        var els = document.querySelectorAll('.cont');
+        for (var i = 0; i < els.length; i++) {
+            els[i].style.display = "none";
+        }
+        var els2 = document.querySelectorAll('.navbtn');
+        for (var i = 0; i < els.length; i++) {
+            els2[i].classList.remove('active');
+        }
+        document.getElementById('b' + elID).classList.add('active');
+        document.getElementById(elID).style.display = "block";
+    }
+
+    if (window.location.href.indexOf("#") != -1) {
+        s = window.location.href.substring(window.location.href.indexOf('#') + 1);
+        if (document.getElementById(s)) {
+            show(s);
+        }
+    }
+    </script>
+    <script type="text/javascript">
+    let root = document.documentElement;
+    let dark = false;
+
+    function setDark(s) {
+        if (s) {
+            root.style.setProperty('--bg', "#1f1f21");
+            root.style.setProperty('--bg2', "#19191a");
+            root.style.setProperty('--bg3', "#ffffff");
+        } else {
+            root.style.setProperty('--bg', "#ffffff");
+            root.style.setProperty('--bg2', "#F7F7F7");
+            root.style.setProperty('--bg3', "#383434");
+        }
+    }
+
+    function toggleDark() {
+        dark = !dark;
+        setDark(dark);
+    }
     </script>
 </body>
 
