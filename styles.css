@@ -84,7 +84,8 @@ ul li {
     transition: all .5s;
 }
 
-.link:hover::after, .link.active::after {
+.link:hover::after,
+.link.active::after {
     width: 100%;
 }
 
@@ -257,15 +258,69 @@ iframe {
 }
 
 .footer {
-   position: fixed;
-   left: 0;
-   bottom: 1vh;
-   text-align: center;
-   width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 1vh;
+    text-align: center;
+    width: 100%;
 }
 
 button.link {
     background: none;
     border: none;
     outline: none;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    html,
+    body {
+        overflow: hidden;
+    }
+
+    .cont {
+        width: 80%;
+        left: 5%;
+    }
+
+    .navbar {
+        width: 90%;
+        left: 7.5%;
+    }
+
+    .navbar li {
+        width: 20%;
+    }
+
+    p,
+    a,
+    .link {
+        font-size: 2.5vh;
+        line-height: 3.5vh;
+    }
+
+    .footer {
+        display: none;
+    }
+
+    .productsCont {
+        width: 80vw;
+    }
+
+    .products {
+        width: 80vw;
+    }
+
+    .products td {
+        width: 40vw;
+    }
+
+    .product {
+        display: none;
+    }
+
+    .products.clicked {
+        right: 0;
+    }
+
 }
