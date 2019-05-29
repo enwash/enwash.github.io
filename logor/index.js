@@ -20,8 +20,9 @@ let canvas = document.getElementById("logo");
         ctx.fillStyle = bg;
         ctx.fillRect(0, 0, lw, lh);
         ctx.fillStyle = fg;
+        ctx.textBaseline = "middle";
         ctx.font = "normal " + (bold ? "bold " : "") + (fh / text.length).toString() + "px " + font;
-        ctx.fillText(text, lw / 2, lh / 2 + (fh / (text.length * 2.8)));
+        ctx.fillText(text, lw / 2, lh / 2);
     }
 
     let redrawAll = function() {
