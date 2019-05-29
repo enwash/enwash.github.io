@@ -1,0 +1,38 @@
+canvas {
+    border: 2px solid black;
+    padding: 5px;
+}
+
+input,
+select,
+button {
+    margin-top: .5vh;
+}
+
+input,
+select,
+button,
+label,
+a {
+    font-size: 1.2vw;
+    padding: .4vw .7vw;
+    display: inline-block;
+}
+
+label {
+    position: relative;
+    top: .5vh
+}
+
+h1 {
+    font-size: 3vw;
+    margin: 0;
+}
+
+p {
+    font-size: 1.2vw;
+    margin: 0;
+    margin-top: .5vh;
+    width: 50vw;
+    text-align: justify;
+}

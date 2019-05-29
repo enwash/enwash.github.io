@@ -12,37 +12,7 @@
 <head>
     <title>Logor</title>
     <link href="https://fonts.googleapis.com/css?family=Acme|Anonymous+Pro|Archivo+Black|Cairo|Fjalla+One|Major+Mono+Display|Nova+Mono|Overpass|Paytone+One|Ubuntu&display=swap" rel="stylesheet">
-    <style>
-        canvas {
-            border: 2px solid black;
-            padding: 5px;
-        }
-        input, select, button {
-            margin-top: .5vh;
-        }
-        input, select, button, label, a {
-            font-size: 1.2vw;
-            padding: .4vw .7vw;
-            display: inline-block;
-        }
-        label {
-            position: relative;
-            top: .5vh
-        }
-
-        h1 {
-            font-size: 3vw;
-            margin: 0;
-        }
-
-        p {
-            font-size: 1.2vw;
-            margin: 0;
-            margin-top: .5vh;
-            width: 50vw;
-            text-align: justify;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
@@ -78,54 +48,7 @@
     <br><br>
     <button onclick="redrawAll()" href="#" title="Click me if something hasn't updated properly!">Refresh</button>
     <button onclick="downloadImage()" href="#" title="Download the logo as a PNG file">Download</button>
-    <script>
-    let canvas = document.getElementById("logo");
-    var ctx = canvas.getContext("2d");
-    let lw;
-    let lh;
-    let fh;
-    let font = "Major Mono Display";
-    let bold = true;
-    let text = "TEXT";
-    let bg;
-    let fg;
-
-    let redraw = function(lw, lh, fh, font, bold, text, bg, fg) {
-        // width, height, font height, etc
-        canvas.width = lw;
-        canvas.height = lh;
-        ctx.textAlign = 'center';
-        if (text.length == 1) {
-            fh *= .5;
-        }
-        ctx.fillStyle = bg;
-        ctx.fillRect(0, 0, lw, lh);
-        ctx.fillStyle = fg;
-        ctx.font = "normal " + (bold ? "bold " : "") + (fh / text.length).toString() + "px " + font;
-        ctx.fillText(text, lw / 2, lh / 2 + (fh / (text.length * 2.8)));
-    }
-
-    let redrawAll = function() {
-        lw = 500; // placeholder
-        lh = 500; // placeholder
-        fh = 500; // placeholder
-        bg = document.querySelector('#bgcolor').value;
-        fg = document.querySelector('#fgcolor').value;
-        font = document.querySelector('#fontselect').value;
-        bold = document.querySelector('#boldselect').value == "true";
-        text = document.querySelector('#textinput').value;
-        redraw(lw, lh, fh, font, bold, text, bg, fg);
-    }
-
-    let downloadImage = function() {
-        var link = document.createElement('a');
-        link.download = text + ".png";
-        link.href = canvas.toDataURL()
-        link.click();
-    }
-
-    redrawAll();
-    </script>
+    <script type="text/javascript" src="index.js"></script>
 </body>
 
 </html>
