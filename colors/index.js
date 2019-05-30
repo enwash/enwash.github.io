@@ -70,13 +70,6 @@ function moveRight(node) {
 	}
 }
 
-function myFunction() {
-	var copyText = document.getElementById("myInput");
-	copyText.select();
-	document.execCommand("copy");
-	alert("Copied the text: " + copyText.value);
-}
-
 function copyClip(str) {
 	var el = document.createElement("textarea");
 	el.value = str;
