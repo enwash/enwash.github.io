@@ -93,7 +93,7 @@ function exportCSS() {
 }
 
 function exportPerma() {
-	ret = "https://query/design/colors/#";
+	ret = "https://query.design/colors/#";
 	cols = document.querySelectorAll(".colorLabel");
 	for (var i = 1; i < cols.length; i++) {
 		ret += cols[i].innerHTML.substr(1);
