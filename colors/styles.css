@@ -110,3 +110,45 @@ button {
 .btn:hover {
     border-radius: 1.3vw;
 }
+
+@media only screen and (orientation: portrait) {
+
+    .colorPane {
+        width: 25vh;
+        height: 25vh;
+        margin: 1vh;
+        margin-left: 1.5vh;
+        float: left;
+        border-radius: 1vh;
+        transform: none !important;
+    }
+
+    .colorPane h2 {
+        font-size: 3vh;
+    }
+
+    .colorPane button {
+        font-size: 3vh;
+        margin: 1vh 2vh !important;
+        transform: none !important;
+    }
+
+    .colorPane button.arrow {
+        display: none;
+    }
+
+    .btn {
+        margin-top: 1vh;
+        margin-left: 1.5vh;
+        width: 25vh;
+        height: 7.5vh;
+        font-size: 3vh;
+        border-radius: 1vh;
+        float: left;
+    }
+
+    .btn:hover {
+        border-radius: 2vh;
+    }
+
+}
