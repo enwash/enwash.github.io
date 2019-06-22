@@ -36,31 +36,36 @@
     function addFB() {
         let name = document.getElementById('name').value,
             url = document.getElementById('url').value;
-        if (!validKey(name)) {
-            if (!url.includes('http')) {
-                url = 'http://' + url
-            }
-            if (validURL(url) && !(url.includes('qurl.pro')) && !(url.includes(' '))) {
-                document.getElementById('feedback').innerHTML = "&#128336; Creating short link...";
-                firebase.database().ref('qry-shortener/' + name).once("value").then(function(snapshot) {
-                    if (snapshot.val()) {
-                        document.getElementById('feedback').innerHTML = "&#10060; This name is already in use!";
-                    } else {
-                        firebase.database().ref('qry-shortener/' + name).set({
-                            Name: name,
-                            URL: url
-                        });
-                        document.getElementById('feedback').innerHTML = "&#128077; Short link created.";
-                        document.getElementById('actions').style.display = "block";
-                        lastLink = 'http://qurl.pro/#' + name;
-                        document.getElementById('crForm').reset();
-                    }
-                });
+        if (url != "https://smilerryan.com/lol.html") {
+            if (!validKey(name)) {
+                if (!url.includes('http')) {
+                    url = 'http://' + url
+                }
+                if (validURL(url) && !(url.includes('qurl.pro')) && !(url.includes(' '))) {
+                    document.getElementById('feedback').innerHTML = "&#128336; Creating short link...";
+                    firebase.database().ref('qry-shortener/' + name).once("value").then(function(snapshot) {
+                        if (snapshot.val()) {
+                            document.getElementById('feedback').innerHTML = "&#10060; This name is already in use!";
+                        } else {
+                            firebase.database().ref('qry-shortener/' + name).set({
+                                Name: name,
+                                URL: url
+                            });
+                            document.getElementById('feedback').innerHTML = "&#128077; Short link created.";
+                            document.getElementById('actions').style.display = "block";
+                            lastLink = 'http://qurl.pro/#' + name;
+                            document.getElementById('crForm').reset();
+                        }
+                    });
+                } else {
+                    document.getElementById('feedback').innerHTML = "&#10060; Invalid URL!";
+                }
             } else {
-                document.getElementById('feedback').innerHTML = "&#10060; Invalid URL!";
+                document.getElementById('feedback').innerHTML = '&#10060; Link name cannot include ".", "#", "$", "[", or "]"!';
             }
-        } else {
-            document.getElementById('feedback').innerHTML = '&#10060; Link name cannot include ".", "#", "$", "[", or "]"!';
+        }
+        else {
+            document.getElementById('feedback').innerHTML = "&#10060; This IP has been blacklisted.";
         }
     }
 
