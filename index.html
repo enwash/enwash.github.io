@@ -89,32 +89,8 @@
             </div>
         </div>
         <div class="cont" id="shop">
-            <h1>graphic design shop</h1>
-            <h2>basic</h2>
-            <ul>
-                <li>up to 10 seconds in length</li>
-                <li>full hd video file</li>
-                <li>$5.00</li>
-                <a class="link" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=5PW8SBK2SBT3C&lc=US&item_name=Basic%20Motion%20Introduction&amount=5%2e00&currency_code=USD&button_subtype=services&bn=PP%2dBuyNowBF%3abtn_buynowCC_LG%2egif%3aNonHosted">buy now</a>
-            </ul>
-            <h2>premium</h2>
-            <ul>
-                <li>up to 15 seconds in length</li>
-                <li>2k hd video file</li>
-                <li>$8.00</li>
-                <a class="link" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=5PW8SBK2SBT3C&lc=US&item_name=Premium%20Motion%20Introduction&amount=8%2e00&currency_code=USD&button_subtype=services&bn=PP%2dBuyNowBF%3abtn_buynowCC_LG%2egif%3aNonHosted">buy now</a>
-            </ul>
-            <h2>pro</h2>
-            <ul>
-                <li>up to 25 seconds in length</li>
-                <li>4k uhd video file</li>
-                <li>$13.00</li>
-                <a class="link" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=5PW8SBK2SBT3C&lc=US&item_name=Professional%20Motion%20Introduction&amount=13%2e00&currency_code=USD&button_subtype=services&bn=PP%2dBuyNowBF%3abtn_buynowCC_LG%2egif%3aNonHosted">buy now</a>
-            </ul>
-            <h2>other services</h2>
-            <ul>
-                <li><a class="link" href="mailto:ericknwash@gmail.com?subject=Service Quote">get a quote</a></li>
-            </ul>
+            <h1>get a quote</h1>
+            <p>by <a class="link" href="mailto:ericknwash@gmail.com?subject=design quote&body=Describe what you're looking for here. If possible, provide an example of my past work or someone else's that is similar to what you want.">email</a> or <a class="showdisc" onclick="copyClip('query#6260');alert('Copied Discord handle to clipboard');">discord<span>query#6260</span></a></p>
         </div>
         <div class="cont" id="contact">
             <p>questions? inquiries? queries for Query? hit me up <a class="link" href="mailto:ericknwash@gmail.com">here</a>.</p>
@@ -133,6 +109,17 @@
         for (var i = 0; i < els.length; i++) {
             els[i].classList.remove('clicked');
         }
+    }
+
+    function copyClip(str) {
+        var el = document.createElement("textarea");
+        el.value = str;
+        el.setAttribute("readonly", "");
+        el.style = { position: "absolute", left: "-9999px" };
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand("copy");
+        document.body.removeChild(el);
     }
 
     function show(elID) {

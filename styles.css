@@ -75,6 +75,29 @@ ul li {
     text-decoration: none;
 }
 
+.showdisc {
+    display: inline-block;
+    font-size: 1.6vh;
+    line-height: 2.4vh;
+    color: var(--fg);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.showdisc span {
+    cursor: text;
+    position: relative;
+    left: .2vw;
+    opacity: 0;
+    transition: .4s;
+    mix-blend-mode: multiply;
+}
+
+.showdisc:hover span {
+    left: .35vw;
+    opacity: 1;
+}
+
 .link::after {
     content: '';
     display: block;
