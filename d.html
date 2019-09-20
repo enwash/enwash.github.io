@@ -49,9 +49,16 @@
 
     if (window.location.href.indexOf("#") != -1) {
         url = window.location.href.substring(window.location.href.indexOf('#') + 1) + '.zip';
-        form.action = 'd/' + url;
+        //form.action = 'd/' + url;
         h.innerHTML = url;
         btn.disabled = false;
+	btn.onclick = function() {
+		s = document.createElement('a');
+		a.href = url;
+		a.setAttribute('id', 'startdl');
+		document.appendChild(a);
+		document.getElementById('startdl').click();
+	}
     } else {
         btn.innerHTML = 'Invalid download link!';
         btn.disabled = true;
