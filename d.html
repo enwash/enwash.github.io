@@ -44,21 +44,20 @@
 	            });
         	}
         });
-        window.open('https://youtube.com/enwash?sub_confirmation=1');
     }
 
     if (window.location.href.indexOf("#") != -1) {
-        url = 'd/' + window.location.href.substring(window.location.href.indexOf('#') + 1) + '.zip';
+        url = window.location.href.substring(window.location.href.indexOf('#') + 1) + '.zip';
         //form.action = 'd/' + url;
         h.innerHTML = url;
         btn.disabled = false;
 	btn.onclick = function() {
 		a = document.createElement('a');
-		a.href = url;
+		a.href = 'd/' + url;
 		a.setAttribute('id', 'startdl');
 		document.body.appendChild(a);
 		document.getElementById('startdl').click();
-		console.log('started dl');
+		window.open('https://youtube.com/enwash?sub_confirmation=1');
 	}
     } else {
         btn.innerHTML = 'Invalid download link!';
