@@ -48,6 +48,7 @@
 
     if (window.location.href.indexOf("#") != -1) {
         url = window.location.href.substring(window.location.href.indexOf('#') + 1) + '.zip';
+	window.location.href += '?ref=0';
         //form.action = 'd/' + url;
         h.innerHTML = url;
         btn.disabled = false;
