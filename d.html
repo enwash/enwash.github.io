@@ -48,7 +48,7 @@
     }
 
     if (window.location.href.indexOf("#") != -1) {
-        url = window.location.href.substring(window.location.href.indexOf('#') + 1) + '.zip';
+        url = 'd/' + window.location.href.substring(window.location.href.indexOf('#') + 1) + '.zip';
         //form.action = 'd/' + url;
         h.innerHTML = url;
         btn.disabled = false;
