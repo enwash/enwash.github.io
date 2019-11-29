@@ -12,7 +12,7 @@
 <body style="text-align:center">
     <form id="form" method="get" action="" onsubmit="sub()" style="display:inline-block;margin-top:40vh;">
         <h1 class="w3-text-red" style="font-weight:700" id="heading"></h1>
-        <input type="hidden" name="ref" value="0">
+        <!--<input type="hidden" name="ref" value="0">-->
         <button disabled type="submit" id="btn" class="w3-red w3-btn">Start download</button>
     </form>
     <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
@@ -44,14 +44,21 @@
 	            });
         	}
         });
-        window.open('https://youtube.com/enwash?sub_confirmation=1');
     }
 
     if (window.location.href.indexOf("#") != -1) {
         url = window.location.href.substring(window.location.href.indexOf('#') + 1) + '.zip';
-        form.action = 'd/' + url;
+        //form.action = 'd/' + url;
         h.innerHTML = url;
         btn.disabled = false;
+	btn.onclick = function() {
+		a = document.createElement('a');
+		a.href = 'd/' + url;
+		a.setAttribute('id', 'startdl');
+		document.body.appendChild(a);
+		document.getElementById('startdl').click();
+		window.open('https://youtube.com/enwash?sub_confirmation=1');
+	}
     } else {
         btn.innerHTML = 'Invalid download link!';
         btn.disabled = true;
