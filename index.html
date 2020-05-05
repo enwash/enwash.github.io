@@ -1,170 +1,62 @@
 <!DOCTYPE html>
-<!-- ALL CONTENT COPYRIGHT 2019 QUERY -->
-<html>
+<html lang="en">
 
 <head>
-    <title>Query</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="images/favicon.png">
-    <script src="index.js"></script>
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Query" />
-    <meta property="og:description" content="Graphic, motion, and web designer and developer." />
-    <meta property="og:url" content="https://query.design" />
+
+  <meta charset="UTF-8" />
+  <title>nich</title>
+
+  <link rel="stylesheet" href="styles/index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
-<!-- You found me! happiness.jpg -->
 
 <body>
-    <div class="centered">
-        <div class="header">
-            <div class="navbar">
-                <ul>
-                    <li><a onclick="show('home');" class="link navbtn active" id="bhome" href="#home">home</a></li>
-                    <li><a onclick="show('services');" class="link navbtn" id="bservices" href="#services">services</a></li>
-                    <li><a onclick="show('shop');" class="link navbtn" id="bshop" href="#shop">shop</a></li>
-                    <li><a onclick="show('contact');" class="link navbtn" id="bcontact" href="#contact">contact</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="cont default" id="home">
-            <h1>a fresh take on minimal design.</h1>
-            <p>I'm Query, a <cem>graphic, motion, and web</cem> designer and developer. I experiment with new styles to find what's perfect for a client so I can deliver <cem>the branding you've always dreamed of.</cem>
-            </p>
-            <a class="link" href="#services" onclick="show('services');">learn more</a>
-        </div>
-        <div class="cont" id="services">
-            <h1>what i can do</h1>
-            <div class="productsCont">
-                <table class="products" onclick="this.classList.add('clicked');">
-                    <tr>
-                        <td class="productsCat" id="graphics" onclick="openCat(this.id)">
-                            <p>graphics</p>
-                        </td>
-                        <td class="productsCat" id="web" onclick="openCat(this.id)">
-                            <p>web</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="productsCat" id="apps" onclick="openCat(this.id)">
-                            <p>apps</p>
-                        </td>
-                        <td class="productsCat" id="music" onclick="openCat(this.id)">
-                            <p>music</p>
-                        </td>
-                    </tr>
-                </table>
-                <div class="product p1" id="pgraphics">
-                    <h2 class="productHead fg1">graphics portfolio</h2>
-                    <div class="videoCont">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/51-lMJBIpIc?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <a class="link" href="#shop" onclick="show('shop')">view packages</a>
-                    <br><a class="link" onclick="unclick()" href="#">go back</a>
-                </div>
-                <div class="product p2" id="pweb">
-                    <h2 class="productHead fg1">web portfolio</h2>
-                    <ul>
-                        <li><a class="link" href="http://captainnick88.com">client website</a></li>
-                        <li><a class="link" href="projects.html">more web projects</a></li>
-                    </ul>
-                    <a class="link" href="mailto:ericknwash@gmail.com?subject=Web design quote">get a quote</a>
-                    <br><a class="link" onclick="unclick()" href="#">go back</a>
-                </div>
-                <div class="product p3" id="papps">
-                    <h2 class="productHead fg1">app portfolio</h2>
-                    <ul>
-                        <li><a class="link" href="https://github.com/enwash/Q-Todo">todo extension</a></li>
-                        <li><a class="link" href="http://qurl.pro">url shortener</a></li>
-                        <li><a class="link" href="https://github.com/enwash/PyPL">predicate logic</a></li>
-                    </ul>
-                    <a class="link" href="mailto:ericknwash@gmail.com?subject=App development quote">get a quote</a>
-                    <br><a class="link" onclick="unclick()" href="#">go back</a>
-                </div>
-                <div class="product p4" id="pmusic">
-                    <h2 class="productHead fg1">music portfolio</h2>
-                    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/612351153&color=%23fd8b48&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><br>
-                    <a class="link" href="mailto:ericknwash@gmail.com?subject=Music production quote">get a quote</a>
-                    <br><a class="link" onclick="unclick()" href="#">go back</a>
-                </div>
-            </div>
-        </div>
-        <div class="cont" id="shop">
-            <h1>get a quote</h1>
-            <p>by <a class="link" href="mailto:ericknwash@gmail.com?subject=design quote&body=Describe what you're looking for here. If possible, provide an example of my past work or someone else's that is similar to what you want.">email</a> or <a class="showdisc" onclick="copyClip('query#2952');alert('Copied Discord handle to clipboard');">discord<span>query#2952</span></a></p>
-        </div>
-        <div class="cont" id="contact">
-            <p>questions? inquiries? queries for Query? hit me up <a class="link" href="mailto:ericknwash@gmail.com">here</a>.</p>
-        </div>
-        <div class="footer">
-            <button style="cursor:pointer;display:none" class="link" onclick="toggleDark()">toggle dark mode</button>
-        </div>
+  <div id="cursor"></div>
+  <div id="cursorfollow"></div>
+  <div class="cont">
+    <div class="inner">
+      <h1>hey, <span class="hl">I'm nich.</span></h1>
+      <h2>I'm a <span class="hl">freelance designer</span> and <span class="hl">full-stack web developer.</span></h2>
+      <a class="btn hov" href="#work" data-tilt data-tilt-max="12" data-tilt-speed="800" data-tilt-perspective="500" data-tilt-reverse="true">View my work</a>
     </div>
-    <script>
-    function openCat(elID) {
-        document.getElementById('p' + elID).classList.add('clicked');
-    }
+  </div>
+  <div class="cont2" id="work">
+    <h1>Recent work</h1>
+    <ul id="workul">
+      <li data-aos="fade-up"><span class="hl"><br>&mdash;motion</span></li>
+      <li data-aos="fade-up"><a href="work/reel.html">2019 reel</a></li>
+      <li data-aos="fade-up"><a href="work/wlroo.html">wlroo contest entry</a></li>
+      <li data-aos="fade-up"><a href="work/mandeville.html">steven mandeville</a></li>
+      <li data-aos="fade-up"><a href="work/thomaslord.html">thomas lord</a></li>
 
-    function unclick() {
-        var els = document.querySelectorAll('.clicked');
-        for (var i = 0; i < els.length; i++) {
-            els[i].classList.remove('clicked');
-        }
-    }
+      <li data-aos="fade-up"><span class="hl"><br>&mdash;web</span></li>
+      <li data-aos="fade-up"><a href="work/tint.html">color picker</a></li>
+      <li data-aos="fade-up"><a href="work/rampr.html">gradient generator</a></li>
+      <li data-aos="fade-up"><a href="work/todo.html">todo extension</a></li>
+      <li data-aos="fade-up"><a href="work/captainnick.html">captainnick shop</a></li>
 
-    function copyClip(str) {
-        var el = document.createElement("textarea");
-        el.value = str;
-        el.setAttribute("readonly", "");
-        el.style = { position: "absolute", left: "-9999px" };
-        document.body.appendChild(el);
-        el.select();
-        document.execCommand("copy");
-        document.body.removeChild(el);
-    }
+      <!--<li data-aos="fade-up"><span class="hl"><br>&mdash;graphics</span></li>
+      <li data-aos="fade-up"><a href="work/dazon.html">dazon logo</a></li>
+      <li data-aos="fade-up"><a href="work/dazon.html">dazon logo</a></li>-->
+    </ul>
+    <span data-aos="fade-up">
+      <a class="btn hov" href="https://youtube.com/enwash" data-tilt data-tilt-max="12" data-tilt-speed="400" data-tilt-perspective="500" data-tilt-reverse="true">More projects</a>
+      <a class="btn hov" href="mailto:ericknwash@gmail.com" data-tilt data-tilt-max="12" data-tilt-speed="400" data-tilt-perspective="500" data-tilt-reverse="true">Get in touch</a>
+    </span>
+  </div>
 
-    function show(elID) {
-        unclick();
-
-        var els = document.querySelectorAll('.cont');
-        for (var i = 0; i < els.length; i++) {
-            els[i].style.display = "none";
-        }
-        var els2 = document.querySelectorAll('.navbtn');
-        for (var i = 0; i < els.length; i++) {
-            els2[i].classList.remove('active');
-        }
-        document.getElementById('b' + elID).classList.add('active');
-        document.getElementById(elID).style.display = "block";
-    }
-
-    if (window.location.href.indexOf("#") != -1) {
-        s = window.location.href.substring(window.location.href.indexOf('#') + 1);
-        if (document.getElementById(s)) {
-            show(s);
-        }
-    }
-    </script>
-    <script type="text/javascript">
-    let root = document.documentElement;
-    let dark = false;
-
-    function setDark(s) {
-        if (s) {
-            root.style.setProperty('--bg', "#1f1f21");
-            root.style.setProperty('--bg2', "#19191a");
-            root.style.setProperty('--bg3', "#ffffff");
-        } else {
-            root.style.setProperty('--bg', "#ffffff");
-            root.style.setProperty('--bg2', "#F7F7F7");
-            root.style.setProperty('--bg3', "#383434");
-        }
-    }
-
-    function toggleDark() {
-        dark = !dark;
-        setDark(dark);
-    }
-    </script>
+  <script src="https://cdn.jsdelivr.net/gh/prcptn-dsgn/qwik/dist/min.js"></script>
+  <script src="scripts/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
