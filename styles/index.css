@@ -1,8 +1,8 @@
 :root {
   /*--1: #f36e65;
   --2: #222228;*/
-  --1: #eded1a;
-  --2: black;
+  --1: #ffc478;
+  --2: #3b2f31;
   --3: white;
 }
 
@@ -92,8 +92,8 @@ p {
   position: fixed;
   left: 50%;
   top: 50%;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2),
-    inset 0 0 15px rgba(255, 255, 255, 0.2);
+  /* box-shadow: 0 0 20px rgba(255, 255, 255, 0.2),
+    inset 0 0 15px rgba(255, 255, 255, 0.2); */
 }
 
 #cursor.action,
@@ -109,7 +109,7 @@ p {
 }
 
 #cursor {
-  opacity: 0.7;
+  opacity: 0.8;
   width: 6px;
   height: 6px;
   background: var(--3);
@@ -120,7 +120,7 @@ p {
 }
 
 #cursorfollow.canim {
-  background: radial-gradient(transparent 15%, white 16%, white 45%, transparent 50%);
+  background: radial-gradient(transparent 15%, var(--3) 16%, var(--3) 45%, transparent 50%);
   background-size: 0% 0%;
   background-position: 50%;
   animation: canim 1s forwards;
@@ -180,6 +180,9 @@ p {
   }
   .link {
     font-size: 2.6vmax !important;
+  }
+  #logo {
+    display: none !important;
   }
 }
 
@@ -292,4 +295,20 @@ p {
 
 #cursor.hidden, #cursorfollow.hidden {
   opacity: 0;
+}
+
+#loga {
+  position: fixed;
+  top: .2vw;
+  left: 1vw;
+  opacity: .8;
+  transition: opacity .3s;
+}
+
+#loga:hover {
+  opacity: 1;
+}
+
+#logo {
+  width: 4vw;
 }
